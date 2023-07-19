@@ -1,0 +1,6 @@
+User-agent: *
+Crawl-delay: 5
+Disallow: /qr.png
+Disallow: /resume.pdf
+Disallow: /thumb.webp
+Sitemap: https://cbabuccuoglu.com/sitemap.xml
