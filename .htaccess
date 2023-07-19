@@ -28,4 +28,13 @@
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent
 
+  # Remove file extensions
+  RewriteEngine on
+
+  RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+  RewriteRule ^ /%1 [NC,L,R]
+
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
 </IfModule>
