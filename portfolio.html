@@ -18,6 +18,8 @@
     <script async
             src="https://www.googletagmanager.com/gtag/js?id=G-3QMGWKW8VC"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "G-3QMGWKW8VC");</script>
+    <!-- Replace URL with the origin -->
+    <script>(() => {window.history.replaceState({}, window.location, window.location.origin);})();</script>
   </head>
 
   <body class="text-white bg-black">
@@ -132,14 +134,11 @@
         </footer>
       </div>
     </div>
+    <!-- Reload page essentially loads the homepage, since url is replaced in head -->
     <script>
-      const replaceState = () => {
-        window.history.replaceState({}, window.location, 'https://cbabuccuoglu.com');
-      };
       document.addEventListener('DOMContentLoaded', () => {
         const backButton = document.querySelector('.js-go-back');
         backButton.addEventListener('click', () => {
-          replaceState();
           location.reload();
         });
       })
