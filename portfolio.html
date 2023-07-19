@@ -96,8 +96,8 @@
         <footer>
           <div class="row footer mt-2">
             <div class="col-12 pb-3">
-              <a class="text-white opacity-75 hover--opacity-1"
-                 href="javascript:history.back();">&#8592; Go Back</a>
+              <a class="text-white opacity-75 hover--opacity-1 js-go-back" href="javascript:void(0);"
+                 alt="Go Back">&#8592; Go Back</a>
             </div>
             <div class="col-12 pb-3">
               <div class="d-flex gap-3 justify-content-center">
@@ -132,6 +132,19 @@
         </footer>
       </div>
     </div>
+    <script>
+      const replaceState = () => {
+        window.history.replaceState({}, window.location, 'https://cbabuccuoglu.com');
+      };
+      document.addEventListener('DOMContentLoaded', () => {
+        const backButton = document.querySelector('.js-go-back');
+        backButton.addEventListener('click', () => {
+          replaceState();
+          location.reload();
+        });
+      })
+    </script>
   </body>
+  
 
 </html>
