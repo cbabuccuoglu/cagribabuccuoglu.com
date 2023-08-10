@@ -19,7 +19,7 @@
             src="https://www.googletagmanager.com/gtag/js?id=G-3QMGWKW8VC"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date()); gtag("config", "G-3QMGWKW8VC");</script>
     <!-- Replace URL with the origin -->
-    <script>(() => {window.history.replaceState({}, window.location, window.location.origin);})();</script>
+    <script>(() => { window.history.replaceState({}, window.location, window.location.origin); })();</script>
   </head>
 
   <body class="text-white bg-black">
@@ -98,27 +98,25 @@
         <footer>
           <div class="row footer mt-2">
             <div class="col-12 pb-3">
-              <a class="text-white opacity-75 hover--opacity-1 js-go-back" href="javascript:void(0);"
+              <a class="text-white opacity-75 hover--opacity-1 js-go-back"
+                 href=""
                  alt="Go Back">&#8592; Go Back</a>
             </div>
             <div class="col-12 pb-3">
               <div class="d-flex gap-3 justify-content-center">
                 <a class="text-white opacity-75 hover--opacity-1"
-                   href=mailto:connect@cagribabuccuoglu.com><i title="Send Email"
+                   href=mailto:connect@cagribabuccuoglu.com>
+                  <i title="Send Email"
                      alt=Email
-                     class="bi bi-envelope"></i></a><a class="text-white opacity-75 hover--opacity-1"
+                     class="bi bi-envelope"></i>
+                </a>
+                <a class="text-white opacity-75 hover--opacity-1"
                    target=_blank
-                   href=https://www.linkedin.com/in/cagribabuccuoglu /><i title="See Linkedin Profile"
-                   alt=Linkedin
-                   class="bi bi-linkedin"></i></a><a class="text-white opacity-75 hover--opacity-1"
-                   target=_blank
-                   href=https://www.instagram.com/cbabuccuoglu><i title="Show Instagram Page"
-                     alt=Instagram
-                     class="bi bi-instagram"></i></a><a class="text-white opacity-75 hover--opacity-1"
-                   target=_blank
-                   href=https://t.me/cbabuccuoglu><i title="Message on Telegram"
-                     alt=Telegram
-                     class="bi bi-telegram"></i></a>
+                   href=https://www.linkedin.com/in/cagribabuccuoglu>
+                  <i title="See Linkedin Profile"
+                     alt=Linkedin
+                     class="bi bi-linkedin"></i>
+                </a>
               </div>
             </div>
             <div class="col-12 pb-3">
@@ -134,16 +132,14 @@
         </footer>
       </div>
     </div>
-    <!-- Reload page essentially loads the homepage, since url is replaced in head -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const backButton = document.querySelector('.js-go-back');
-        backButton.addEventListener('click', () => {
-          location.reload();
-        });
-      })
+      // document.addEventListener('click', (event) => {
+      //   if(event.target.matches('.js-go-back')) {
+      //     location.reload();
+      //   }
+      // }, false)
     </script>
   </body>
-  
+
 
 </html>
