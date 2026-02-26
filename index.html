@@ -6,8 +6,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This is the personal and portfolio website of Çağrı Babuçcuoğlu." />
-    <link rel="shortcut icon" href=favicon.png type=image/x-icon />
+    <meta name="description" content="Çağrı Babuçcuoğlu — Shopify Plus developer and software engineer. View my portfolio of recent works." />
+    <meta property="og:title" content="Çağrı Babuçcuoğlu - ISC" />
+    <meta property="og:description" content="Çağrı Babuçcuoğlu — Shopify Plus developer and software engineer. View my portfolio of recent works." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cbabuccuoglu.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Çağrı Babuçcuoğlu - ISC" />
+    <meta name="twitter:description" content="Çağrı Babuçcuoğlu — Shopify Plus developer and software engineer. View my portfolio of recent works." />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <title>Çağrı Babuçcuoğlu - ISC</title>
     <link rel="stylesheet" href="style.min.css" />
     <!-- Google tag (gtag.js) -->
@@ -25,7 +32,7 @@
 
   <body class="text-white bg-black">
     <div class="container">
-      <div style="height: 85vh" class="d-flex flex-column text-center">
+      <div class="main-wrapper d-flex flex-column text-center">
         <div class="row mt-auto">
         </div>
         <div class="row mt-4">
@@ -35,13 +42,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row mt-4">
-          <div class="col-12">
-            <div class="d-flex justify-content-center text-muted">
-              <h2>Software Developer</h2>
-            </div>
-          </div>
-        </div> -->
         <div class="row mt-4 mb-auto">
           <div class="col-12">
             <div class="d-flex justify-content-center">
@@ -51,24 +51,28 @@
             </div>
           </div>
         </div>
-        <footer style="position: fixed; bottom: 0; left: 0; width: 100%">
+        <footer class="footer-fixed">
           <div class="row footer mt-2">
             <div class="col-12 pb-3">
               <div class="d-flex gap-3 justify-content-center">
-                <a class="text-white opacity-75 hover--opacity-1" href="mailto:cb@iscyazilim.com.tr">
-                  <i title="Send Email" alt="Email" class="bi bi-envelope"></i>
+                <a class="text-white opacity-75 hover--opacity-1" href="mailto:cb@iscyazilim.com.tr" aria-label="Send Email">
+                  <i class="bi bi-envelope" aria-hidden="true"></i>
                 </a>
                 <a
                   class="text-white opacity-75 hover--opacity-1"
                   target="_blank"
-                  href="https://www.linkedin.com/in/cagribabuccuoglu">
-                  <i title="See Linkedin Profile" alt="Linkedin" class="bi bi-linkedin"></i>
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/cagribabuccuoglu"
+                  aria-label="See LinkedIn Profile">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
                 </a>
                 <a
                   class="text-white opacity-75 hover--opacity-1"
                   target="_blank"
-                  href="https://www.upwork.com/freelancers/~017c8bae1092c0af49">
-                  <i title="See Upwork Profile" alt="Upwork" class="bi bi-upwork"></i>
+                  rel="noopener noreferrer"
+                  href="https://www.upwork.com/freelancers/~017c8bae1092c0af49"
+                  aria-label="See Upwork Profile">
+                  <i class="bi bi-upwork" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -77,6 +81,7 @@
                 <h3>
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="text-white opacity-75 hover--opacity-1"
                     href="https://calendar.notion.so/meet/cbabuccuoglu/30m"
                     >Get an appointment</a
