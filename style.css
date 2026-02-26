@@ -810,13 +810,6 @@ p {
   margin: 0;
 }
 
-.panel {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
 .footer {
   bottom: 0;
   left: 0;
@@ -826,4 +819,25 @@ p {
 
 .underline-0 {
   text-decoration: none;
+}
+
+.main-wrapper {
+  height: 85vh;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.portfolio-heading {
+  font-size: 3rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
