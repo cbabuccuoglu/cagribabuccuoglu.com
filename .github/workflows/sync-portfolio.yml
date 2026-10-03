@@ -1,0 +1,45 @@
+name: Sync portfolio from Google Sheets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-portfolio-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Render portfolio from Google Sheets
+        run: node scripts/sync-portfolio.mjs
+        env:
+          SHEETS_API_KEY: ${{ secrets.SHEETS_API_KEY }}
+          SHEETS_SPREADSHEET_ID: ${{ vars.SHEETS_SPREADSHEET_ID }}
+          # Must match a website referrer allowed on the API key.
+          SHEETS_API_REFERER: https://iscyazilim.com.tr/
+
+      - name: Commit changes to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portfolio.html
+          if git diff --cached --quiet; then
+            echo "Portfolio is unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore: sync portfolio from Google Sheets"
+          git push origin HEAD:main
