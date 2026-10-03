@@ -1,8 +1,6 @@
 */ OS Files */
 .DS_Store
 
-*/ IDE Config */
-.vscode
+.env
 
-*/ Firebase Hosting */
-.firebase
+.codegraph
