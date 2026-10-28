@@ -278,3 +278,23 @@ button:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+
+/* Single-page views: only one section is visible at a time */
+[hidden] {
+  display: none !important;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#portfolio {
+  padding: 6rem 0;
+}
+
+/* Headings receive focus on view change for screen readers; skip the visual ring */
+h1[tabindex="-1"]:focus {
+  outline: none;
+}

@@ -4,7 +4,7 @@ const spreadsheetId = process.env.SHEETS_SPREADSHEET_ID;
 const spreadsheetRange = 'A1:D1000';
 const startMarker = '<!-- SHEET_PROJECTS_START -->';
 const endMarker = '<!-- SHEET_PROJECTS_END -->';
-const portfolioPath = new URL('../portfolio.html', import.meta.url);
+const portfolioPath = new URL('../index.html', import.meta.url);
 
 const apiKey = process.env.SHEETS_API_KEY;
 const referrer = process.env.SHEETS_API_REFERER;
@@ -108,7 +108,7 @@ const startIndex = html.indexOf(startMarker);
 const endIndex = html.indexOf(endMarker);
 
 if (startIndex === -1 || endIndex === -1 || endIndex < startIndex) {
-  throw new Error('Portfolio project markers were not found; no files were changed.');
+  throw new Error('Portfolio project markers were not found in index.html; no files were changed.');
 }
 
 const contentStart = startIndex + startMarker.length;
@@ -116,7 +116,7 @@ const updatedHtml = `${html.slice(0, contentStart)}\n${renderedProjects}\n      
 
 if (updatedHtml !== html) {
   await writeFile(portfolioPath, updatedHtml);
-  console.log(`Updated portfolio.html with ${projects.length} visible projects.`);
+  console.log(`Updated index.html with ${projects.length} visible projects.`);
 } else {
   console.log(`Portfolio is already current (${projects.length} visible projects).`);
 }
